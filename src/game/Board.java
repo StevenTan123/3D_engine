@@ -43,19 +43,19 @@ public class Board extends JPanel implements ActionListener {
     	
     	// Sort triangles in mesh in order of shortest to longest distance from camera
         Collections.sort(mesh.tris, new Comparator<Triangle>() {
-            @Override
-            public int compare(Triangle a, Triangle b) {
-                float depth1 = Main.cam.cameraRot(a.centroid).z;
-                float depth2 = Main.cam.cameraRot(b.centroid).z;
-                if (depth1 > depth2) {
-                    return -1;
-                } else if(depth2 > depth1) {
-                    return 1;
-                } else {
-                    return 0;
+                @Override
+                public int compare(Triangle a, Triangle b) {
+                    float depth1 = Main.cam.cameraRot(a.centroid).z;
+                    float depth2 = Main.cam.cameraRot(b.centroid).z;
+                    if (depth1 > depth2) {
+                        return -1;
+                    } else if(depth2 > depth1) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
                 }
-            }
-        });
+            });
         
         // Draw each triangle individually
     	for (Triangle tri : mesh.tris) {

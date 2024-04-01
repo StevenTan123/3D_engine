@@ -67,9 +67,9 @@ public class Point3D {
         float cos = (float) Math.cos(ang);
         float sin = (float) Math.sin(ang);
         float[][] rotMat = new float[][] {
-                { cos, 0, sin },
-                { 0, 1, 0 },
-                { -sin, 0, cos }
+            { cos, 0, sin },
+            { 0, 1, 0 },
+            { -sin, 0, cos }
         };
         return rotPoint(rotMat);
     }
@@ -79,9 +79,9 @@ public class Point3D {
         float cos = (float) Math.cos(ang);
         float sin = (float) Math.sin(ang);
         float[][] rotMat = new float[][] {
-                { cos, -sin, 0 },
-                { sin, cos, 0 },
-                { 0, 0, 1 }
+            { cos, -sin, 0 },
+            { sin, cos, 0 },
+            { 0, 0, 1 }
         };
         return rotPoint(rotMat);
     }

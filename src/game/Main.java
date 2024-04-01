@@ -40,9 +40,9 @@ public class Main extends JFrame {
     // Main function
     public static void main(String[] args) throws InterruptedException {
     	EventQueue.invokeLater(() -> {
-            Main game = new Main();
-            game.setVisible(true);
-        });
+                Main game = new Main();
+                game.setVisible(true);
+            });
     }
 
     // Generate mesh terrain using the Diamond Square algorithm
@@ -113,10 +113,10 @@ public class Main extends JFrame {
     	for (int i = 0; i < map_size - 1; i += chunk_size) {
     		for (int j = 0; j < map_size - 1; j += chunk_size) {
     			height_map[i + half][j + half] = (height_map[i][j] + 
-    												height_map[i + chunk_size][j] + 
-    												height_map[i][j + chunk_size] + 
-    												height_map[i + chunk_size][j + chunk_size]) / 4 + 
-    												(Main.rng.nextFloat() * 2 - 1) * noise;
+                                                  height_map[i + chunk_size][j] + 
+                                                  height_map[i][j + chunk_size] + 
+                                                  height_map[i + chunk_size][j + chunk_size]) / 4 + 
+                    (Main.rng.nextFloat() * 2 - 1) * noise;
     		}
     	}
     	
